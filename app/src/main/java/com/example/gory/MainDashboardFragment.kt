@@ -31,6 +31,8 @@ class MainDashboardFragment: Fragment(R.layout.main_dashboard) {
             val transaction = fragmentManager?.beginTransaction()
             transaction?.replace(R.id.fragmentContainer,fragment)?.commit()
         }
+
+
     }
 
     override fun onDestroy() {

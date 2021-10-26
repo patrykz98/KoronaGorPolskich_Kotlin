@@ -5,13 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.gory.databinding.FragmentMenuBinding
 import com.example.gory.databinding.MainDashboardBinding
+import kotlinx.android.synthetic.main.fragment_menu.*
 
 class MenuFragment : Fragment(R.layout.fragment_menu) {
     private var _binding: FragmentMenuBinding? = null
     private val binding get () = _binding!!
 
+    private var layoutManager: RecyclerView.LayoutManager? = null
+    private var adapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,17 +25,27 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
         // Inflate the layout for this fragment
         _binding = FragmentMenuBinding.inflate(inflater, container, false)
 
+        layoutManager = LinearLayoutManager(context)
+        binding.recyclerView.layoutManager = layoutManager
+
+        adapter = RecyclerAdapter()
+        binding.recyclerView.adapter = adapter
+
         return binding.root;
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonBack.setOnClickListener{
+        binding.arrowBack.setOnClickListener{
             val fragment = MainDashboardFragment()
             val transaction = fragmentManager?.beginTransaction()
             transaction?.replace(R.id.fragmentContainer,fragment)?.commit()
         }
+
+//        binding.buttonSize.setOnClickListener{
+//            binding.textMenu.setTextSize(24F)
+//        }
     }
 
     override fun onDestroy() {

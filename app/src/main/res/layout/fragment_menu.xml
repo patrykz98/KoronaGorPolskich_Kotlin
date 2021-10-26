@@ -7,38 +7,56 @@
     tools:context=".MenuFragment"
     android:background="@drawable/menu_mountain_bg">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="120dp"
-        android:layout_marginEnd="121dp"
-        android:layout_marginBottom="397dp"
-        android:fontFamily="@font/arima_madurai"
-        android:paddingTop="300dp"
-        android:text="Tutaj coś będzie"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/arrowBack"
+        android:layout_width="18dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="35dp"
+        android:src="@drawable/ic_back_arrow"
+        android:tint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/textMenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/buttonBack"
+    <TextView
+        android:id="@+id/textMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="288dp"
-        android:backgroundTint="@color/black"
-        android:text="Wróć"
-        android:textColor="@color/white"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/advent_pro_bold"
+        android:text="Menu"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toStartOf="@+id/textGlowne"
+        app:layout_constraintStart_toEndOf="@+id/arrowBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textGlowne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/advent_pro_light"
+        android:text="główne"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintStart_toEndOf="@+id/textMenu"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="409dp"
+        android:layout_height="734dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textGlowne"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
