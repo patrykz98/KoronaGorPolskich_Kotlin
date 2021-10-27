@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import android.os.Bundle
+import android.widget.Toast
 
 class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
@@ -24,15 +25,16 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         holder.itemTitle.text = titles[position]
         holder.itemSubtitle.text = subtitles[position]
 
-        if(position == 0){
-
+        if(position == 1 || position == 0){
             holder.itemView.setOnClickListener{
                 val context = holder.itemView.context
-                val intent = Intent(context, MainActivity::class.java)
-                intent.putExtra("position",0)
+                val intent = Intent(context, CardViewItemAgent::class.java)
+                intent.putExtra("position", position)
                 context.startActivity(intent)
             }
         }
+
+
     }
 
     override fun getItemCount(): Int {
@@ -47,6 +49,21 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         init {
             itemTitle = itemView.findViewById(R.id.itemTitle)
             itemSubtitle = itemView.findViewById(R.id.itemSubtitle)
+
+            itemView.setOnClickListener{
+                val position: Int = adapterPosition
+                var title: String = ""
+                when (position){
+                    0 -> title = "Galeria"
+                    1 -> title = "Mapy"
+                    2 -> title = "Zdobyte szczyty"
+                    3 -> title = "Pogoda"
+                    4 -> title = "Kalendarz"
+                    5 -> title = "Co to KGP?"
+                }
+
+                Toast.makeText(itemView.context, title, Toast.LENGTH_SHORT).show()
+            }
         }
     }
 

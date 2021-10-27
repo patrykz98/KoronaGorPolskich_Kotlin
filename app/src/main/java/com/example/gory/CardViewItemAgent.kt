@@ -10,7 +10,16 @@ class CardViewItemAgent: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, MainDashboardFragment()).commit()
+        val positionCardView: Int = intent.getIntExtra("position",0)
+
+        if(positionCardView == 0)
+            supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, GalleryFragment()).commit()
+
+        if(positionCardView == 1)
+            supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, MapsFragment()).commit()
+
+
+
 
     }
 }
