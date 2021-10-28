@@ -14,7 +14,7 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     private var titles = arrayOf("Galeria", "Mapa", "Zdobyte szczyty", "Pogoda", "Kalendarz", "Co to KGP?", "Funkcja 7", "Funkcja 8")
     private var subtitles = arrayOf("Zobacz zdjęcia i \nnajważniejsze szczegóły \nwszystkich szczytów", "Sprawdź okolicę i \nszczegóły dojazdu"
-        , "Nie pozwól sobie zapomnieć \nco już za Tobą, zapisz to!", "Sprawdź czy warto \nwziąć pelerynę", "Sprawdź kiedy masz \nczas zdobyć je wszystkie!", "Geneza Korony Gór Polskich", "Opis", "Opis")
+        , "Nie pozwól sobie zapomnieć \nco już za Tobą, zapisz to!", "Sprawdź czy warto \nwziąć pelerynę", "Sprawdź kiedy masz \nczas zdobyć je wszystkie!", "Geneza Korony Gór Polski", "Opis", "Opis")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false)

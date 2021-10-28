@@ -39,7 +39,7 @@ class MoutainGalleryAdapter (val context: Context?, private val mountains: Array
         }
 
         init {
-            itemView.setOnClickListener(this)
+//            itemView.setOnClickListener(this)
         }
 
     }
