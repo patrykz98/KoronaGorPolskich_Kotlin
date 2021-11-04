@@ -1,43 +1,39 @@
 package com.example.gory
 
-import android.os.Bundle
 import androidx.fragment.app.Fragment
+
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.gory.databinding.FragmentGalleryBinding
-import com.example.gory.databinding.FragmentMapsBinding
+
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 
 class MapsFragment : Fragment() {
 
-    private var _binding: FragmentMapsBinding? = null
-    private val binding get () = _binding!!
+    private val callback = OnMapReadyCallback { googleMap ->
+
+        val sydney = LatLng(-34.0, 151.0)
+        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 10f))
+    }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        _binding = FragmentMapsBinding.inflate(inflater, container, false)
-
-
-        return binding.root;
+        return inflater.inflate(R.layout.fragment_maps, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-//        binding.arrowBack.setOnClickListener{
-//            val fragment = MainDashboardFragment()
-//            val transaction = fragmentManager?.beginTransaction()
-//            transaction?.replace(R.id.fragmentContainer,fragment)?.commit()
-//        }
-
+        val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
+        mapFragment?.getMapAsync(callback)
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        _binding = null
-    }
-
 }

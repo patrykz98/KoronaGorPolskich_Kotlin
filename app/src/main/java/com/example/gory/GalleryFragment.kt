@@ -327,7 +327,11 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        binding.arrowBack.setOnClickListener{
+            val fragment = MenuFragment()
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.fragmentContainer,fragment)?.commit()
+        }
 
     }
 

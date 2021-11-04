@@ -66,15 +66,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
-        <!--        <TextView-->
-        <!--            android:layout_width="wrap_content"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            android:layout_gravity="center"-->
-        <!--            android:fontFamily="@font/advent_pro_bold"-->
-        <!--            android:text=">"-->
-        <!--            android:textColor="@color/white"-->
-        <!--            android:textSize="26sp"-->
-        <!--            android:textStyle="bold" />-->
 
         <ImageView
             android:layout_width="60dp"

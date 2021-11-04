@@ -43,12 +43,12 @@
             android:fontFamily="@font/advent_pro_thin"
             android:text="Opis"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/itemTitle" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/itemImage"
             android:layout_width="117dp"
             android:layout_height="121dp"
             app:layout_constraintBottom_toBottomOf="parent"
