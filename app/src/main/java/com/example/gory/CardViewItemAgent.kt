@@ -18,6 +18,12 @@ class CardViewItemAgent: AppCompatActivity() {
         if(positionCardView == 1)
             supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, MapsFragment()).commit()
 
+        if(positionCardView == 2)
+            supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, AchievementFragment()).commit()
+
+        if(positionCardView == 3)
+            supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, WheatherFragment()).commit()
+
 
 
 

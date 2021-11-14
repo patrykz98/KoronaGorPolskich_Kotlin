@@ -44,7 +44,7 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             .placeholder(R.drawable.image1)
             .into(holder.itemImage)
 
-        if(position == 1 || position == 0){
+        if(position == 1 || position == 0 || position == 2 || position == 3){
             holder.itemView.setOnClickListener{
                 val context = holder.itemView.context
                 val intent = Intent(context, CardViewItemAgent::class.java)

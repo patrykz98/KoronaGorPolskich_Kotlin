@@ -10,13 +10,13 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/arrowBack"
-        android:layout_width="18dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="35dp"
+        android:layout_width="31dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:padding="6dp"
         android:src="@drawable/ic_back_arrow"
         android:tint="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/textMenu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -54,7 +54,6 @@
         android:layout_height="734dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textGlowne"
         app:layout_constraintVertical_bias="1.0" />

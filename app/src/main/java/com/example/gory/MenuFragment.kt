@@ -43,10 +43,6 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
             val transaction = fragmentManager?.beginTransaction()
             transaction?.replace(R.id.fragmentContainer,fragment)?.commit()
         }
-
-//        binding.buttonSize.setOnClickListener{
-//            binding.textMenu.setTextSize(24F)
-//        }
     }
 
     override fun onDestroy() {

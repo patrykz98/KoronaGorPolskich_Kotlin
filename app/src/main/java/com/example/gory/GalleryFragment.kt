@@ -311,7 +311,7 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
         mountains.add(
             Moutains(
             "Rysy",
-            "2499m. n.p.m.",
+            "2501m. n.p.m.",
             "4h 45m",
             "Najwyższy szczyt tatr",
             "https://www.zakopane.pl/assets/zakopane25/media/files/60d0a6d1-3c29-4ad5-b131-f8a23191c285/rysy.jpg"
