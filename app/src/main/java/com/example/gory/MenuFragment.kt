@@ -41,7 +41,8 @@ class MenuFragment : Fragment(R.layout.fragment_menu) {
         binding.arrowBack.setOnClickListener{
             val fragment = MainDashboardFragment()
             val transaction = fragmentManager?.beginTransaction()
-            transaction?.replace(R.id.fragmentContainer,fragment)?.commit()
+            transaction?.replace(R.id.fragmentContainer,fragment)?.addToBackStack(fragment.javaClass.simpleName)
+                ?.commit()
         }
     }
 
