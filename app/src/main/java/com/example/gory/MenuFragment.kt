@@ -7,9 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gory.MainDashboardFragment
-import com.example.gory.R
-import com.example.gory.RecyclerAdapter
+import com.example.gory.adapter.RecyclerAdapter
 import com.example.gory.databinding.FragmentMenuBinding
 
 class MenuFragment : Fragment(R.layout.fragment_menu) {

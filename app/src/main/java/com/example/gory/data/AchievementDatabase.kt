@@ -13,7 +13,7 @@ abstract class AchievementDatabase: RoomDatabase() {
 
         @Synchronized
         fun getDatabse(context: Context): AchievementDatabase{
-            if(achievementDatabase != null){
+            if(achievementDatabase == null){
                 achievementDatabase = Room.databaseBuilder(
                     context,
                     AchievementDatabase::class.java,

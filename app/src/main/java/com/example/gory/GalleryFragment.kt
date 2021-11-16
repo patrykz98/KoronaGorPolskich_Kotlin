@@ -7,9 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
-import androidx.recyclerview.widget.RecyclerView
+import com.example.gory.adapter.MoutainGalleryAdapter
 import com.example.gory.databinding.FragmentGalleryBinding
-import com.example.gory.databinding.FragmentMenuBinding
 
 class GalleryFragment : Fragment(R.layout.fragment_gallery) {
 

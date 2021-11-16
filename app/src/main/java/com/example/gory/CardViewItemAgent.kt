@@ -2,6 +2,7 @@ package com.example.gory
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.gory.adapter.WheatherFragment
 
 class CardViewItemAgent: AppCompatActivity() {
 

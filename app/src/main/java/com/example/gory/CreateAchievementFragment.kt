@@ -67,11 +67,14 @@ class CreateAchievementFragment : BaseFragment() {
             achievement.place = binding.editTextAchievementPlace.text.toString()
             achievement.description = binding.editTextAchievementDesc.text.toString()
             achievement.time = binding.editTextAchievementTime.text.toString()
+            achievement.date = binding.textViewDate.text.toString()
             context?.let{
                 AchievementDatabase.getDatabse(it).achievementDao().insertAchievement(achievement)
                 binding.editTextAchievementPlace.setText("")
                 binding.editTextAchievementDesc.setText("")
                 binding.editTextAchievementTime.setText("")
+                binding.textViewDate.setText("")
+
             }
         }
 
