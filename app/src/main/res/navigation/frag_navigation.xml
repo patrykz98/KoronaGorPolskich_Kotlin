@@ -20,8 +20,44 @@
         android:label="fragment_menu"
         tools:layout="@layout/fragment_menu" >
         <action
-            android:id="@+id/action_menuFragment_to_mainDashboardFragment"
-            app:destination="@id/mainDashboardFragment"
-            app:enterAnim="@anim/nav_default_pop_exit_anim" />
+            android:id="@+id/action_menuFragment_to_achievementFragment"
+            app:destination="@id/achievementFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_wheatherFragment"
+            app:destination="@id/wheatherFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/achievementFragment"
+        android:name="com.example.gory.AchievementFragment"
+        android:label="fragment_achievement"
+        tools:layout="@layout/fragment_achievement" >
+        <action
+            android:id="@+id/action_achievementFragment_to_createAchievementFragment"
+            app:destination="@id/createAchievementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAchievementFragment"
+        android:name="com.example.gory.CreateAchievementFragment"
+        android:label="fragment_create_achievement"
+        tools:layout="@layout/fragment_create_achievement" />
+    <fragment
+        android:id="@+id/wheatherFragment"
+        android:name="com.example.gory.adapter.WheatherFragment"
+        android:label="fragment_wheather"
+        tools:layout="@layout/fragment_wheather" />
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.gory.MapsFragment"
+        android:label="MapsFragment" />
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="com.example.gory.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" />
 </navigation>
