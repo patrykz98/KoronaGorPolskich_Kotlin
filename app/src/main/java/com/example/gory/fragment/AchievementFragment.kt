@@ -1,16 +1,14 @@
-package com.example.gory
+package com.example.gory.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.gory.R
 import com.example.gory.adapter.AchievementAdapter
 import com.example.gory.data.AchievementDatabase
 import com.example.gory.databinding.FragmentAchievementBinding
-import com.example.gory.databinding.FragmentMapsBinding
-import kotlinx.android.synthetic.main.fragment_menu.*
 import kotlinx.coroutines.launch
 
 class AchievementFragment : BaseFragment() {

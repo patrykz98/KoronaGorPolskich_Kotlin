@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.gory.Moutains
+import com.example.gory.data.Moutains
 import com.example.gory.R
+import com.example.gory.data.WheaterItem
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.galerry_card_item.view.*
 
-class MoutainGalleryAdapter (val context: Context?, private val mountains: ArrayList<Moutains>): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
+class MoutainGalleryAdapter(val context: Context?, private val mountains: ArrayList<Moutains>): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -40,9 +41,6 @@ class MoutainGalleryAdapter (val context: Context?, private val mountains: Array
             TODO("Not yet implemented")
         }
 
-        init {
-//            itemView.setOnClickListener(this)
-        }
 
     }
 

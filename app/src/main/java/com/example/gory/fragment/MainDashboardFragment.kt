@@ -1,10 +1,11 @@
-package com.example.gory
+package com.example.gory.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.gory.R
 import com.example.gory.databinding.MainDashboardBinding
 
 class MainDashboardFragment: Fragment(R.layout.main_dashboard) {

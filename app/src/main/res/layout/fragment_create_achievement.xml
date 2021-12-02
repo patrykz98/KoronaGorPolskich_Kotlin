@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateAchievementFragment"
+    tools:context=".fragment.CreateAchievementFragment"
     android:background="@drawable/gallery_background">
 
     <androidx.appcompat.widget.AppCompatImageView

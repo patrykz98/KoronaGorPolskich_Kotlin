@@ -1,4 +1,4 @@
-package com.example.gory
+package com.example.gory.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

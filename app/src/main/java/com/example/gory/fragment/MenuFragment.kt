@@ -1,4 +1,4 @@
-package com.example.gory
+package com.example.gory.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.gory.R
 import com.example.gory.adapter.RecyclerAdapter
 import com.example.gory.databinding.FragmentMenuBinding
 

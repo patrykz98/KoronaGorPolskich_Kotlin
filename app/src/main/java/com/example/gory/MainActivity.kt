@@ -2,6 +2,7 @@ package com.example.gory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.gory.fragment.MainDashboardFragment
 
 class MainActivity : AppCompatActivity() {
 

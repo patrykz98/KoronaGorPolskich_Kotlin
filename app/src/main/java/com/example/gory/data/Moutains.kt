@@ -1,4 +1,4 @@
-package com.example.gory
+package com.example.gory.data
 
 data class Moutains(val name:String?=null,
                     val height:String?=null,

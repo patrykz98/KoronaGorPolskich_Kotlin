@@ -36,10 +36,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainDashboardFragment" />
-        <activity android:name=".MenuFragment" />
+        <activity android:name=".fragment.MainDashboardFragment" />
+        <activity android:name=".fragment.MenuFragment" />
         <activity android:name=".CardViewItemAgent" />
-        <activity android:name=".GalleryFragment" />
+        <activity android:name=".fragment.GalleryFragment" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />

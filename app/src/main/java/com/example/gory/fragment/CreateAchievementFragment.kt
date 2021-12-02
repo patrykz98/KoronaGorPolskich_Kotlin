@@ -1,14 +1,13 @@
-package com.example.gory
+package com.example.gory.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import com.example.gory.R
 import com.example.gory.data.Achievement
 import com.example.gory.data.AchievementDatabase
-import com.example.gory.databinding.FragmentAchievementBinding
 import com.example.gory.databinding.FragmentCreateAchievementBinding
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -48,6 +47,10 @@ class CreateAchievementFragment : BaseFragment() {
 
         binding.saveAchievment.setOnClickListener{
             saveNote()
+            val fragment = AchievementFragment()
+            val transaction = fragmentManager?.beginTransaction()
+            transaction?.replace(R.id.fragmentContainer,fragment)
+                ?.commit()
         }
     }
 
