@@ -235,7 +235,7 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
                 "Mogielica",
                 "1171m n.p.m.",
                 "2h 45m",
-                "Najwyższy szczyt beskidu sądeckiego",
+                "Najwyższy szczyt Beskidu Wyspowego",
                 "https://images.unsplash.com/photo-1609676759174-e5bd358627d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1473&q=80"
             )
         )
@@ -315,7 +315,7 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery) {
             "Rysy",
             "2501m. n.p.m.",
             "4h 45m",
-            "Najwyższy szczyt tatr",
+            "Najwyższy szczyt Tatr",
             "https://www.zakopane.pl/assets/zakopane25/media/files/60d0a6d1-3c29-4ad5-b131-f8a23191c285/rysy.jpg"
         )
         )

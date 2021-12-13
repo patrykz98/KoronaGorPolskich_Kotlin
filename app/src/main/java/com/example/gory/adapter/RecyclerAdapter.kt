@@ -14,9 +14,9 @@ import com.example.gory.R
 
 class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
-    private var titles = arrayOf("Galeria", "Mapa", "Zdobyte szczyty", "Pogoda", "Kalendarz", "Co to KGP?", "Funkcja 7", "Funkcja 8")
+    private var titles = arrayOf("Galeria", "Mapa", "Zdobyte szczyty", "Pogoda", "Kalendarz", "Co to KGP?")
     private var subtitles = arrayOf("Zobacz zdjęcia i \nnajważniejsze szczegóły \nwszystkich szczytów", "Sprawdź okolicę i \nszczegóły dojazdu"
-        , "Nie pozwól sobie zapomnieć \nco już za Tobą, zapisz to!", "Sprawdź czy warto \nwziąć pelerynę", "Sprawdź kiedy masz \nczas zdobyć je wszystkie!", "Geneza Korony Gór Polski", "Opis", "Opis")
+        , "Nie pozwól sobie zapomnieć \nco już za Tobą, zapisz to!", "Sprawdź czy warto \nwziąć pelerynę", "Sprawdź kiedy masz \nczas zdobyć je wszystkie!", "Geneza Korony Gór Polski")
 
     private var urls = arrayOf("https://image.freepik.com/free-vector/stamp-collecting-concept-illustration_114360-6583.jpg",
         "https://image.freepik.com/free-vector/paper-map-concept-illustration_114360-2203.jpg",
@@ -24,8 +24,6 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         "https://image.freepik.com/free-vector/weather-concept-illustration_114360-1189.jpg",
         "https://image.freepik.com/free-vector/build-your-program-appointment-booking_23-2148552954.jpg",
         "https://image.freepik.com/free-vector/nature-mountain-icons_1284-4518.jpg",
-        "https://image.freepik.com/free-vector/wanderlust-explore-landscape_24908-55342.jpg",
-        "https://image.freepik.com/free-vector/wanderlust-explore-landscape_24908-55342.jpg",
         "https://image.freepik.com/free-vector/wanderlust-explore-landscape_24908-55342.jpg")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -43,7 +41,7 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             .placeholder(R.drawable.image1)
             .into(holder.itemImage)
 
-        if(position == 1 || position == 0 || position == 2 || position == 3){
+        if(position == 1 || position == 0 || position == 2 || position == 3|| position == 4){
             holder.itemView.setOnClickListener{
                 val context = holder.itemView.context
                 val intent = Intent(context, CardViewItemAgent::class.java)
@@ -51,7 +49,6 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
                 context.startActivity(intent)
             }
         }
-
 
     }
 

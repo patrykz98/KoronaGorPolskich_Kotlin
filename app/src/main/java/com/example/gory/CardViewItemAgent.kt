@@ -2,10 +2,7 @@ package com.example.gory
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.gory.fragment.AchievementFragment
-import com.example.gory.fragment.GalleryFragment
-import com.example.gory.fragment.MapsFragment
-import com.example.gory.fragment.WheatherFragment
+import com.example.gory.fragment.*
 
 class CardViewItemAgent: AppCompatActivity() {
 
@@ -28,6 +25,8 @@ class CardViewItemAgent: AppCompatActivity() {
         if(positionCardView == 3)
             supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, WheatherFragment()).commit()
 
+        if(positionCardView == 4)
+            supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, CalendarFragment ()).commit()
 
 
 
