@@ -14,17 +14,16 @@ import com.example.gory.R
 
 class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
-    private var titles = arrayOf("Galeria", "Mapa", "Zdobyte szczyty", "Pogoda", "Kalendarz", "Co to KGP?")
-    private var subtitles = arrayOf("Zobacz zdjęcia i \nnajważniejsze szczegóły \nwszystkich szczytów", "Sprawdź okolicę i \nszczegóły dojazdu"
-        , "Nie pozwól sobie zapomnieć \nco już za Tobą, zapisz to!", "Sprawdź czy warto \nwziąć pelerynę", "Sprawdź kiedy masz \nczas zdobyć je wszystkie!", "Geneza Korony Gór Polski")
+    private var titles = arrayOf("Galeria", "Mapa", "Zdobyte szczyty", "Pogoda", "Co to KGP?", "Pieczątki")
+    private var subtitles = arrayOf("Zobacz zdjęcia i \nnajważniejsze szczegóły\nwszystkich szczytów", "Sprawdź okolicę i\nszczegóły dojazdu"
+        , "Nie pozwól sobie zapomnieć \nco już za Tobą, zapisz to!", "Sprawdź czy warto \nwziąć pelerynę", "Dowiedz się wszyskiego \nco ważne!", "Przeglądaj pieczątki\nktórych możesz\nbyć kolekcjonerem")
 
     private var urls = arrayOf("https://image.freepik.com/free-vector/stamp-collecting-concept-illustration_114360-6583.jpg",
         "https://image.freepik.com/free-vector/paper-map-concept-illustration_114360-2203.jpg",
         "https://image.freepik.com/free-vector/checklist-concept-illustration_114360-479.jpg",
         "https://image.freepik.com/free-vector/weather-concept-illustration_114360-1189.jpg",
-        "https://image.freepik.com/free-vector/build-your-program-appointment-booking_23-2148552954.jpg",
-        "https://image.freepik.com/free-vector/nature-mountain-icons_1284-4518.jpg",
-        "https://image.freepik.com/free-vector/wanderlust-explore-landscape_24908-55342.jpg")
+        "https://image.freepik.com/free-vector/active-tourist-hiking-mountain-man-wearing-backpack-enjoying-trekking-looking-snowcapped-peaks-vector-illustration-nature-wilderness-adventure-travel-concept_74855-9800.jpg",
+        "https://image.freepik.com/free-vector/nature-mountain-icons_1284-4518.jpg")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_item, parent, false)
