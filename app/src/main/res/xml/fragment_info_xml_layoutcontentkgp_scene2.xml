@@ -11,11 +11,11 @@
            <KeyAttribute
                motion:motionTarget="@+id/contentLayout"
                motion:framePosition="0"
-               android:alpha="0.7" />
+               android:alpha="1" />
            <KeyAttribute
                motion:motionTarget="@+id/imageView"
                motion:framePosition="0"
-               android:alpha="0.5" />
+               android:alpha="1" />
            <KeyAttribute
                motion:motionTarget="@+id/imageView"
                motion:framePosition="100"
@@ -24,6 +24,10 @@
                motion:motionTarget="@+id/contentLayout"
                motion:framePosition="100"
                android:alpha="1" />
+           <KeyAttribute
+               motion:motionTarget="@+id/imageView"
+               motion:framePosition="50"
+               android:alpha="0.5" />
        </KeyFrameSet>
         <OnSwipe motion:touchAnchorId="@+id/contentLayout" />
     </Transition>

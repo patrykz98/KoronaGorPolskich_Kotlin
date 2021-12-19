@@ -16,7 +16,7 @@
         android:fontFamily="@font/raleway_semibold"
         android:text="Co to"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="26sp"
         app:layout_constraintStart_toEndOf="@+id/arrowBack"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,7 +30,7 @@
         android:fontFamily="@font/raleway_light"
         android:text="Korona Gór Polski"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="26sp"
         app:layout_constraintStart_toEndOf="@+id/textViewTileFragment"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -68,8 +68,8 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/rysy"
-            tools:srcCompat="@drawable/rysy" />
+            app:srcCompat="@drawable/rysy1"
+            tools:srcCompat="@drawable/rysy1" />
 
         <LinearLayout
             android:id="@+id/contentLayout"

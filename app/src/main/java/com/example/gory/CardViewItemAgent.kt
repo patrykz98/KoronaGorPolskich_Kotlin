@@ -26,7 +26,10 @@ class CardViewItemAgent: AppCompatActivity() {
             supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, WheatherFragment()).commit()
 
         if(positionCardView == 4)
-            supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, InfoFragment ()).commit()
+            supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, InfoFragment()).commit()
+
+        if(positionCardView == 5)
+            supportFragmentManager.beginTransaction().add(R.id.fragmentContainer, StampsFragment()).commit()
 
 
 

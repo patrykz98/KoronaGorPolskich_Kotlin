@@ -12,19 +12,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:padding="6dp"
         android:src="@drawable/ic_back_arrow"
         android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/titleMaps"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/titleMaps" />
 
     <TextView
         android:id="@+id/titleMaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/advent_pro_bold"
+        android:fontFamily="@font/raleway_semibold"
         android:text="Mapy"
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -40,7 +40,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="@color/black"
-        android:fontFamily="@font/advent_pro_bold"
+        android:fontFamily="@font/raleway_semibold"
         android:text="Pokaż lokalizacje"
         android:textSize="11sp"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup"
@@ -63,7 +63,7 @@
             android:id="@+id/radioButtonMapNormal"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/advent_pro_bold"
+            android:fontFamily="@font/raleway_semibold"
             android:text="Mapa"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -72,7 +72,7 @@
             android:id="@+id/radioButtonMapSatelite"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/advent_pro_bold"
+            android:fontFamily="@font/raleway_semibold"
             android:text="Satelita"
             android:textColor="@color/black"
             android:textSize="16sp" />

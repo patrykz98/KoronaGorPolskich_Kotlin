@@ -18,11 +18,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:fontFamily="@font/advent_pro_bold"
+            android:fontFamily="@font/raleway_semibold"
             android:gravity="center"
             android:text="Rysy"
             android:textColor="@color/black"
-            android:textSize="22sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/textViewLocation2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:fontFamily="@font/advent_pro_light"
+            android:fontFamily="@font/raleway_light"
             android:lines="2"
             android:maxEms="10"
             android:padding="4dp"
@@ -48,29 +48,32 @@
             android:id="@+id/textViewTemperature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/advent_pro"
+            android:fontFamily="@font/raleway"
             android:paddingStart="20dp"
             android:paddingBottom="10dp"
             android:text="10"
             android:textColor="@color/black"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/textViewLocation"
-            app:layout_constraintEnd_toStartOf="@+id/textViewCelsius" />
+            app:layout_constraintBottom_toBottomOf="@+id/textViewCelsius"
+            app:layout_constraintEnd_toStartOf="@+id/textViewCelsius"
+            app:layout_constraintTop_toTopOf="@+id/textViewCelsius" />
 
         <TextView
             android:id="@+id/textViewCelsius"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/textViewLocation"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            android:fontFamily="@font/advent_pro"
+            android:fontFamily="@font/raleway"
             android:gravity="center"
             android:paddingBottom="10dp"
             android:text=" °C"
             android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/textViewLocation"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView8"
@@ -78,7 +81,6 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginBottom="12dp"
-            android:fontFamily="@font/advent_pro"
             android:gravity="center"
             android:text="▶"
             android:textColor="@color/black"

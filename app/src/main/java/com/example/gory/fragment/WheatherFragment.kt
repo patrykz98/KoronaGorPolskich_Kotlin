@@ -141,7 +141,7 @@ class WheatherFragment : Fragment() {
         adapter.setOnItemClickListener(object: WheatherItemAdapter.OnItemClickListener{
             override fun onItemClick(humidity: Int, wind: Double, sunset: Int, sunrise: Int) {
                 binding.textViewHumidity.text = (humidity.toString() + " %").takeIf { humidity.toString() != "0" }
-                binding.textViewWind.text = ((wind * 1.609344).round(2).toString() + " km/h").takeIf { wind.toString() != "0.0" }
+                binding.textViewWind.text = ((wind * 1.609344).round(1).toString() + " km/h").takeIf { wind.toString() != "0.0" }
                 var sunriseTime = simpleDateFormat.format(sunrise * 1000L).toString()
                 var sunsetTime = simpleDateFormat.format(sunset * 1000L).toString()
                 binding.textViewSunrise.text = sunriseTime.takeWhile { sunriseTime!="01:00" }

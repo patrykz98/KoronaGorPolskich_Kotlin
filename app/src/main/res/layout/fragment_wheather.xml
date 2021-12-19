@@ -8,12 +8,12 @@
     android:background="@color/gray_700">
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/textViewTitleWheather"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/advent_pro_bold"
+        android:fontFamily="@font/raleway_semibold"
         android:text="Pogoda"
         android:textColor="@color/black"
         android:textSize="30sp"
@@ -25,12 +25,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:padding="6dp"
         android:src="@drawable/ic_back_arrow"
         android:tint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTitleWheather"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/textViewTitleWheather" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewWeather"
@@ -42,25 +42,98 @@
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitleWheather" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:outlineAmbientShadowColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        android:background="@color/gray_700"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/rounded_background_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/recyclerViewWeather">
 
+        <ImageView
+            android:id="@+id/imageViewHumidity"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/humidity"
+            app:layout_constraintStart_toEndOf="@+id/textViewHumidity"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWheatherDetailsHeader" />
+
+        <ImageView
+            android:id="@+id/imageViewWind"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/wind"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewHumidity"
+            app:layout_constraintStart_toStartOf="@+id/imageViewHumidity"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewHumidity" />
+
+        <ImageView
+            android:id="@+id/imageViewSunrise"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/sunrise"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewHumidity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewHumidity"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/imageViewSunset"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/sunset"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewWind"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewSunrise"
+            app:layout_constraintStart_toEndOf="@+id/textViewSunrise"
+            app:layout_constraintTop_toTopOf="@+id/imageViewWind" />
+
+        <TextView
+            android:id="@+id/textViewHumidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/raleway"
+            android:text="--  %"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewHumidity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewHumidity" />
+
+        <TextView
+            android:id="@+id/textViewSunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/raleway"
+            android:text="-- "
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewSunrise"
+            app:layout_constraintEnd_toStartOf="@+id/imageViewSunrise"
+            app:layout_constraintTop_toTopOf="@+id/imageViewSunrise" />
+
         <TextView
             android:id="@+id/textViewWheatherDetailsHeader"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
-            android:fontFamily="@font/advent_pro_bold"
+            android:fontFamily="@font/raleway_semibold"
             android:text="Zobacz szczegóły"
             android:textColor="@color/black"
             android:textSize="26sp"
@@ -70,99 +143,30 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textViewHumidity"
+            android:id="@+id/textViewSunset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:fontFamily="@font/advent_pro"
-            android:text="--  %"
+            android:fontFamily="@font/raleway"
+            android:text="-- "
             android:textColor="@color/black"
-            android:textSize="26sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewHumidity"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageViewHumidity" />
-
-        <ImageView
-            android:id="@+id/imageViewHumidity"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="64dp"
-            android:src="@drawable/humidity"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewWheatherDetailsHeader" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewSunset"
+            app:layout_constraintEnd_toEndOf="@+id/textViewSunrise"
+            app:layout_constraintStart_toStartOf="@+id/textViewSunrise"
+            app:layout_constraintTop_toTopOf="@+id/imageViewSunset" />
 
         <TextView
             android:id="@+id/textViewWind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:fontFamily="@font/advent_pro"
+            android:fontFamily="@font/raleway"
             android:text="-- km/h"
             android:textColor="@color/black"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@+id/imageViewWind"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textViewHumidity"
+            app:layout_constraintStart_toStartOf="@+id/textViewHumidity"
             app:layout_constraintTop_toTopOf="@+id/imageViewWind" />
-
-        <ImageView
-            android:id="@+id/imageViewWind"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginBottom="64dp"
-            android:src="@drawable/wind"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewHumidity" />
-
-        <TextView
-            android:id="@+id/textViewSunrise"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/advent_pro"
-            android:text="-- "
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewSunrise"
-            app:layout_constraintEnd_toStartOf="@+id/imageViewSunrise"
-            app:layout_constraintTop_toTopOf="@+id/imageViewSunrise" />
-
-        <ImageView
-            android:id="@+id/imageViewSunrise"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewHumidity"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageViewHumidity"
-            app:layout_constraintVertical_bias="1.0"
-            android:src="@drawable/sunrise" />
-
-        <TextView
-            android:id="@+id/textViewSunset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="@font/advent_pro"
-            android:text="-- "
-            android:textColor="@color/black"
-            android:textSize="22sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewSunset"
-            app:layout_constraintEnd_toStartOf="@+id/imageViewSunset"
-            app:layout_constraintTop_toTopOf="@+id/imageViewSunset" />
-
-        <ImageView
-            android:id="@+id/imageViewSunset"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageViewWind"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imageViewWind"
-            android:src="@drawable/sunset" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

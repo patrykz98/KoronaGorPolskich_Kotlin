@@ -40,14 +40,14 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             .placeholder(R.drawable.image1)
             .into(holder.itemImage)
 
-        if(position == 1 || position == 0 || position == 2 || position == 3|| position == 4){
-            holder.itemView.setOnClickListener{
-                val context = holder.itemView.context
-                val intent = Intent(context, CardViewItemAgent::class.java)
-                intent.putExtra("position", position)
-                context.startActivity(intent)
-            }
+
+        holder.itemView.setOnClickListener{
+            val context = holder.itemView.context
+            val intent = Intent(context, CardViewItemAgent::class.java)
+            intent.putExtra("position", position)
+            context.startActivity(intent)
         }
+
 
     }
 
@@ -65,22 +65,8 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             itemTitle = itemView.findViewById(R.id.itemTitle)
             itemSubtitle = itemView.findViewById(R.id.itemSubtitle)
             itemImage = itemView.findViewById(R.id.itemImage)
-
-            itemView.setOnClickListener{
-                val position: Int = adapterPosition
-                var title: String = ""
-                when (position){
-                    0 -> title = "Galeria"
-                    1 -> title = "Mapy"
-                    2 -> title = "Zdobyte szczyty"
-                    3 -> title = "Pogoda"
-                    4 -> title = "Kalendarz"
-                    5 -> title = "Co to KGP?"
-                }
-
-                Toast.makeText(itemView.context, title, Toast.LENGTH_SHORT).show()
             }
         }
-    }
+
 
 }

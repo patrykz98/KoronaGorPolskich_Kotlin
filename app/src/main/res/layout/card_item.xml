@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
-            android:fontFamily="@font/advent_pro_bold"
+            android:fontFamily="@font/raleway_medium"
             android:text="Funkcja 1"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -40,10 +40,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/advent_pro_thin"
+            android:fontFamily="@font/raleway_light"
             android:text="Opis"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="15sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/itemTitle" />
 
