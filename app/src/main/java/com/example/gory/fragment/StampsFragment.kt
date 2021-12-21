@@ -40,6 +40,7 @@ class StampsFragment : Fragment() {
 
         setupRecyclerview()
 
+
         binding.frameLayoutStampBook.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
                 val alertDialogBuilder = AlertDialog.Builder(v!!.context)
@@ -50,7 +51,6 @@ class StampsFragment : Fragment() {
                 Glide.with(v!!.context)
                     .load("https://3.bp.blogspot.com/-v3TUogh_pqc/WvCDGdHPYoI/AAAAAAAABLM/9TlcoB7iHFccbCArYh7zfyUgOPcrBesxQCEwYBhgL/s1600/2018-05-07%2B06.36.45%2B1.jpg")
                     .centerInside()
-                    .diskCacheStrategy(DiskCacheStrategy.NONE)
                     .placeholder(R.drawable.image1)
                     .into(view.findViewById<ImageView>(R.id.imageViewAlertDialog))
 
@@ -64,6 +64,18 @@ class StampsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        Glide.with(view.context)
+            .load("https://image.freepik.com/free-vector/opened-book-with-empty-pages_1308-78627.jpg")
+            .centerInside()
+            .placeholder(R.drawable.image1)
+            .into(view.findViewById<ImageView>(R.id.showBook))
+
+        Glide.with(view.context)
+            .load("https://image.freepik.com/free-vector/light-bulb-concept-illustration_114360-4372.jpg")
+            .centerInside()
+            .placeholder(R.drawable.image1)
+            .into(view.findViewById<ImageView>(R.id.imageViewStampExplenation))
 
         binding.arrowBack.setOnClickListener{
             val fragment = MenuFragment()

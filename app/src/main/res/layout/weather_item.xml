@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="95dp"
     android:layout_height="160dp"
     android:orientation="vertical"
     android:layout_margin="5dp"
-    android:background="@drawable/item_weather_background"
+    app:cardCornerRadius="4dp"
+    app:cardBackgroundColor="@color/white"
     android:id="@+id/wheatherItem">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,4 +94,4 @@
 
 
 
-</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

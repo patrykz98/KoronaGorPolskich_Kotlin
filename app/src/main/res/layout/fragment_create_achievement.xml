@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".fragment.CreateAchievementFragment"
-    android:background="@drawable/gallery_background">
+    android:background="@drawable/color_background">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/arrowBack"
@@ -37,10 +37,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/advent_pro_bold"
+        android:fontFamily="@font/raleway_semibold"
         android:text="Szczegóły"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/arrowBack" />
 
@@ -49,10 +49,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/advent_pro"
+        android:fontFamily="@font/raleway_light"
         android:text=" osiągnięcia"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/arrowBack" />
 
@@ -77,7 +77,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:ellipsize="end"
-            android:fontFamily="@font/advent_pro"
+            android:textSize="16sp"
+            android:fontFamily="@font/raleway"
             android:hint="Nazwa szczytu"
             android:maxLines="1"
             android:textColor="@color/black"
@@ -86,7 +87,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -100,34 +101,33 @@
 
         <TextView
             android:id="@+id/textViewDate"
-            android:layout_width="match_parent"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/raleway_semibold"
+            android:padding="10dp"
             android:text="Data"
             android:textColor="@color/black"
-            android:padding="10dp"
             android:textSize="16sp"
-            android:fontFamily="@font/advent_pro_bold"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-<!--        <EditText-->
-<!--            android:id="@+id/editTextAchievementDate"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_margin="20dp"-->
-<!--            android:layout_marginStart="24dp"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:layout_marginEnd="24dp"-->
-<!--            android:backgroundTint="@color/black"-->
-<!--            android:ellipsize="end"-->
-<!--            android:fontFamily="@font/advent_pro_light"-->
-<!--            android:hint="Data (08.09.2021)"-->
-<!--            android:maxLines="1"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textColorHint="@color/black"-->
-<!--            android:textSize="12sp"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />-->
-    </LinearLayout>
+        <Button
+            android:id="@+id/buttonSetDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/raleway_semibold"
+            android:text="Ustaw datę"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -155,12 +155,12 @@
             android:layout_marginEnd="24dp"
             android:backgroundTint="@color/black"
             android:ellipsize="end"
-            android:fontFamily="@font/advent_pro_light"
+            android:fontFamily="@font/raleway"
             android:hint="Czas wejścia"
             android:maxLines="1"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -191,14 +191,38 @@
             android:layout_marginEnd="24dp"
             android:backgroundTint="@color/black"
             android:ellipsize="end"
-            android:fontFamily="@font/advent_pro_light"
+            android:fontFamily="@font/raleway"
             android:hint="Notatki"
             android:maxLines="3"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
-            android:textSize="18sp" />
-
+            android:textSize="16sp" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonAddImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="@font/raleway_semibold"
+        android:text="Dodaj zdjecie"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+    <ImageView
+        android:id="@+id/imageViewFromGallery"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="24dp"
+        android:src="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
