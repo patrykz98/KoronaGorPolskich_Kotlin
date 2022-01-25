@@ -1,6 +1,7 @@
 package com.example.gory.adapter
 
 import android.graphics.BitmapFactory
+import android.opengl.Visibility
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,8 @@ import com.example.gory.R
 import com.example.gory.data.Achievement
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.achievement_rv_item.view.*
+import kotlinx.android.synthetic.main.achievement_rv_item.view.textViewDate
+import kotlinx.android.synthetic.main.fragment_create_achievement.view.*
 
 class AchievementAdapter(val arrList: List<Achievement>) :
     RecyclerView.Adapter<AchievementAdapter.AchievementViewHolder>(){
@@ -24,10 +27,13 @@ class AchievementAdapter(val arrList: List<Achievement>) :
         holder.itemView.textViewPlace.text = arrList[position].place
         holder.itemView.textViewTime.text = arrList[position].time
         holder.itemView.textViewDate.text = arrList[position].date
-        if(!arrList[position].imgPath.isNullOrEmpty()){
+        if(arrList[position].description != null){
+            holder.itemView.textViewDesc.visibility = View.VISIBLE
+            holder.itemView.textViewDesc.text = arrList[position].description
+        }
+        if(arrList[position].imgPath != null){
             Picasso.get().load(arrList[position].imgPath)
-                .placeholder(R.drawable.image1)
-                .resize(100,250)
+                .resize(450,180)
                 .centerCrop()
                 .into(holder.itemView.imageViewAchievementElement)
         }

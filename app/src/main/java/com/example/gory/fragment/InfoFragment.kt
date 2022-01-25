@@ -7,12 +7,13 @@ import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.fragment.app.Fragment
 import com.example.gory.R
+import com.synnapps.carouselview.CarouselView
 
 
 class InfoFragment : Fragment() {
 
     private lateinit var backArrow: AppCompatImageView
-
+    
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

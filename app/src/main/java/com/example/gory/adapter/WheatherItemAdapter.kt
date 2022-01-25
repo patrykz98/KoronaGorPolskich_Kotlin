@@ -22,7 +22,7 @@ class WheatherItemAdapter :
                                             "Skopiec",
                                             "Kłodzka Góra",
                                             "Chełmiec",
-                                            "Biskupia Kopia",
+                                            "Biskupia Kopa",
                                             "Lubomir",
                                             "Szczeliniec Wielki",
                                             "Czupel",
@@ -98,6 +98,9 @@ class WheatherItemAdapter :
         holder.itemView.textViewTemperature.text = tempCelsius.toString()
         holder.itemView.textViewLocation.text = placesMountain[position]
         holder.itemView.textViewLocation2.text = regionMountain[position]
+
+        System.out.println(l)
+
         this.humidity = l[position].main.humidity
         this.wind = l[position].wind.speed
         this.sunrise = l[position].sys.sunrise

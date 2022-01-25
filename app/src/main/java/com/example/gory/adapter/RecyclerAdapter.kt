@@ -14,7 +14,7 @@ import com.example.gory.R
 
 class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
-    private var titles = arrayOf("Galeria", "Mapa", "Zdobyte szczyty", "Pogoda", "Co to KGP?", "Pieczątki")
+    private var titles = arrayOf("Galeria", "Mapa", "Zdobyte szczyty", "Pogoda", "Co to Korona \nGór Polski?", "Pieczątki")
     private var subtitles = arrayOf("Zobacz zdjęcia i \nnajważniejsze szczegóły\nwszystkich szczytów", "Sprawdź okolicę i\nszczegóły dojazdu"
         , "Nie pozwól sobie zapomnieć \nco już za Tobą, zapisz to!", "Sprawdź czy warto \nwziąć pelerynę", "Dowiedz się wszyskiego \nco ważne!", "Przeglądaj pieczątki\nktórych możesz\nbyć kolekcjonerem")
 
@@ -40,14 +40,12 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
             .placeholder(R.drawable.image1)
             .into(holder.itemImage)
 
-
         holder.itemView.setOnClickListener{
             val context = holder.itemView.context
             val intent = Intent(context, CardViewItemAgent::class.java)
             intent.putExtra("position", position)
             context.startActivity(intent)
         }
-
 
     }
 

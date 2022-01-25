@@ -198,7 +198,6 @@ class MapsFragment : Fragment() {
             transaction?.replace(R.id.fragmentContainer,fragment)?.commit()
         }
 
-//        googleMap.
         googleMap.uiSettings.isZoomControlsEnabled = true
         googleMap.uiSettings.isZoomGesturesEnabled = true
         googleMap.uiSettings.isCompassEnabled = true
@@ -220,7 +219,6 @@ class MapsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
-
     }
 
 }

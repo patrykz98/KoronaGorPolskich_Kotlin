@@ -45,9 +45,6 @@ class AchievementFragment : BaseFragment() {
         binding.arrowBack.setOnClickListener{
             val fragment = MenuFragment()
             val transaction = fragmentManager?.beginTransaction()
-//            if (transaction != null) {
-//                transaction.setCustomAnimations(android.R.anim.cycle_interpolator,android.R.anim.decelerate_interpolator)
-//            }
             transaction?.replace(R.id.fragmentContainer,fragment)?.addToBackStack(fragment.javaClass.simpleName)
                 ?.commit()
         }
